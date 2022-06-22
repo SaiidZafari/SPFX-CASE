@@ -9,7 +9,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'BilhandelWebPartStrings';
-import Bilhandel from './components/Bilhandel';
+import BilhandelFc from './components/BilhandelFc';
 import { IBilhandelProps } from './components/IBilhandelProps';
 
 export interface IBilhandelWebPartProps {
@@ -23,7 +23,7 @@ export default class BilhandelWebPart extends BaseClientSideWebPart<IBilhandelWe
 
   public render(): void {
     const element: React.ReactElement<IBilhandelProps> = React.createElement(
-      Bilhandel,
+      BilhandelFc,
       {
         description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
