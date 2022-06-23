@@ -19,6 +19,11 @@
   max-width: 420px;
 }
 
+.welcomeImageEmp {
+  width: 100%;
+  max-width: 220px;
+}
+
 .links {
   a {
     text-decoration: none;
@@ -31,4 +36,46 @@
       color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
     }
   }
+}
+.theEmployee{
+  // display:flex;
+  // width: 12vw;
+  border: 2px solid black;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin-bottom: 1%;
+  padding: 1%;
+}
+
+.theEmployees{
+  // display: flex;
+  // border: 2px solid red;
+   justify-content: space-between;
+   
+}
+
+.theEmployeesEmp{
+   display: flex;
+  // border: 2px solid red;
+   justify-content: space-between;
+   font-size: 0.7em;
+   text-align:center;
+}
+
+.theCarBox{
+  // display:flex;
+  justify-content: space-between;
+  // margin: 2%;
+  // border: 2px solid red;
+}
+
+.theCar{
+ display:flex;
+  // width: 15vw;
+  margin-bottom: 1%;
+  padding: 1%;
+  border: 2px solid grey;
+  border-radius: 5px;
+  justify-content: space-between;
+  background-color: lightgray;
 }

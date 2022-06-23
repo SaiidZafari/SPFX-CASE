@@ -26,6 +26,7 @@ export default class BilhandelWebPart extends BaseClientSideWebPart<IBilhandelWe
       BilhandelFc,
       {
         description: this.properties.description,
+        websiteUrl: this.context.pageContext.web.absoluteUrl,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
