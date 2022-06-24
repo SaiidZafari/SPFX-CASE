@@ -94,6 +94,8 @@ const BilhandelSalesFc: FunctionComponent<IBilhandelProps> = (props) => {
     ],
   };
 
+ 
+
   const {
     hasTeamsContext,
   } = props;

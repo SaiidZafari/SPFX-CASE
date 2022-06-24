@@ -3,15 +3,6 @@ import { useEffect, useState } from "react";
 import styles from "../Bilhandel.module.scss";
 import { IBilhandelProps } from "../IBilhandelProps";
 import { FunctionComponent } from "react";
-// import { sp } from "@pnp/sp";
-// import '@pnp/sp/webs';
-// import '@pnp/sp/lists';
-// import '@pnp/sp/items/list';
-// import { IItem, Items, PagedItemCollection } from '@pnp/sp/items';
-
-
-
-
 
 const BilhandelCarsFc: FunctionComponent<IBilhandelProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/typedef

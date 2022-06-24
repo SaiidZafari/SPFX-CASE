@@ -6,6 +6,14 @@ Short summary on functionality and used technologies.
 
 [picture of the solution in action, if possible]
 
+The setup for Sharepoint framework development was setup successfully.
+Thereafter, I made a development web part using React. 
+I had difficulties to upload the data from the .json file and thought to use power automate to initiate a workflow to parse the file from a directory into three separate lists. This is how I attempted to address this part of the task.
+
+With consideration that I had difficulties to upload the data from the .json file using hard code, I decided to proceed to the second part of the task where I had to design a web part with information of the employees, car models and sales across three pages. I designed three buttons that would show the desired information from each of the three aforementioned categories. I used the Hooks feature in React, namely 'useState' and 'useEffect'. In order to use these Hooks, the page was turned into a function from a class to accommodate.   
+
+Thereafter, I deployed the project which can be found in sharepoint\solution\spfx-case.sppkg . When you upload the file in 'Manage apps' you can find the web part as an app directly under the name 'bilhandel'. I am grateful towards this experience and would have liked to have done more had it not been for the difficulties uploading data using hard code which impeded my progress. 
+
 ## Used SharePoint Framework Version
 
 ![version](https://img.shields.io/badge/version-1.13-green.svg)
