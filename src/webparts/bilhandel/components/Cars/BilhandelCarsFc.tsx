@@ -1,29 +1,21 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 import styles from "../Bilhandel.module.scss";
 import { IBilhandelProps } from "../IBilhandelProps";
 import { FunctionComponent } from "react";
+// import { sp } from "@pnp/sp";
+// import '@pnp/sp/webs';
+// import '@pnp/sp/lists';
+// import '@pnp/sp/items/list';
+// import { IItem, Items, PagedItemCollection } from '@pnp/sp/items';
+
+
+
+
 
 const BilhandelCarsFc: FunctionComponent<IBilhandelProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/typedef
   const carshop = {
-    employees: [
-      {
-        id: 1,
-        name: "Hjulia Styrén",
-      },
-      {
-        id: 2,
-        name: "Antonia Cylinder",
-      },
-      {
-        id: 3,
-        name: "Kalle Bromslöf",
-      },
-      {
-        id: 4,
-        name: "Johan Sportratt",
-      },
-    ],
     carmodels: [
       {
         id: 1,
@@ -50,60 +42,28 @@ const BilhandelCarsFc: FunctionComponent<IBilhandelProps> = (props) => {
         price: 100000,
       },
     ],
-    sales: [
-      {
-        id: 1,
-        employee_id: 2,
-        carmodel_id: 3,
-      },
-      {
-        id: 2,
-        employee_id: 4,
-        carmodel_id: 2,
-      },
-      {
-        id: 3,
-        employee_id: 4,
-        carmodel_id: 4,
-      },
-      {
-        id: 4,
-        employee_id: 1,
-        carmodel_id: 1,
-      },
-      {
-        id: 5,
-        employee_id: 3,
-        carmodel_id: 1,
-      },
-      {
-        id: 6,
-        employee_id: 3,
-        carmodel_id: 1,
-      },
-      {
-        id: 7,
-        employee_id: 2,
-        carmodel_id: 2,
-      },
-      {
-        id: 8,
-        employee_id: 2,
-        carmodel_id: 3,
-      },
-    ],
   };
 
   const { hasTeamsContext } = props;
 
+  const [cars, setCars] = useState([]);
+ 
+ 
+  useEffect(() => {
+    setCars(carshop.carmodels);
+  }, []);
+  
+  // const items = List.GetByTitle(carmodels).GetItems();
+  
   return (
     <section
       className={`${styles.bilhandel} ${hasTeamsContext ? styles.teams : ""}`}
     >
       <h2>Cars</h2>
+      
       <div className={styles.theEmployees}>
         <div className={styles.theCarBox}>
-          {carshop.carmodels.map((car, index) => (
+          {cars.map((car, index) => (
             <div className={styles.theCar} key={index}>
               <h3>{car.brand}</h3>
               <h3>{car.model}</h3>

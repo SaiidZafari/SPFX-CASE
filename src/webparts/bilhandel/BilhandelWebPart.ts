@@ -12,6 +12,7 @@ import * as strings from 'BilhandelWebPartStrings';
 import BilhandelFc from './components/BilhandelFc';
 import { IBilhandelProps } from './components/IBilhandelProps';
 
+
 export interface IBilhandelWebPartProps {
   description: string;
 }
@@ -27,10 +28,10 @@ export default class BilhandelWebPart extends BaseClientSideWebPart<IBilhandelWe
       {
         description: this.properties.description,
         websiteUrl: this.context.pageContext.web.absoluteUrl,
-        isDarkTheme: this._isDarkTheme,
-        environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+       isDarkTheme: this._isDarkTheme,
+        // environmentMessage: this._environmentMessage,
+       hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        // userDisplayName: this.context.pageContext.user.displayName
       }
     );
 

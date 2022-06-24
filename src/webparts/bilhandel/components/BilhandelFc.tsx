@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FunctionComponent, useState } from "react";
+import {FunctionComponent, useState } from "react";
 import styles from "./Bilhandel.module.scss";
 import { IBilhandelProps } from "./IBilhandelProps";
 import BilhandelSalesFc from "./Sales/BilhandelSalesFc";
@@ -42,27 +42,27 @@ const BilhandelFc: FunctionComponent<IBilhandelProps> = (props) => {
           description={""}
           websiteUrl={""}
           isDarkTheme={false}
-          environmentMessage={""}
+          // environmentMessage={""}
           hasTeamsContext={false}
-          userDisplayName={""}
+          // userDisplayName={""}
         />
       ) : nav === "Sales" ? (
         <BilhandelSalesFc
           description={""}
           websiteUrl={""}
           isDarkTheme={false}
-          environmentMessage={""}
+          // environmentMessage={""}
           hasTeamsContext={false}
-          userDisplayName={""}
+          // userDisplayName={""}
         />
       ) : (
         <BilhandelEmployeeFc
           description={""}
           websiteUrl={""}
           isDarkTheme={false}
-          environmentMessage={""}
+          // environmentMessage={""}
           hasTeamsContext={false}
-          userDisplayName={""}
+          // userDisplayName={""}
         />
       )}
     </section>
